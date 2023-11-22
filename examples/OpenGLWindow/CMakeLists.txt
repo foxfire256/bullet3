@@ -63,7 +63,7 @@ endif ()
 
 if (BUILD_SHARED_LIBS)
   target_link_libraries(OpenGLWindow Bullet3Common)
-  if (WIN32 OR APPLE)
+  if (WIN32 OR APPLE OR MINGW)
    target_link_libraries(OpenGLWindow ${OPENGL_gl_LIBRARY})
   else()
 	set (CMAKE_THREAD_PREFER_PTHREAD TRUE)
